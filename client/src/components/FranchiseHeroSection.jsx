@@ -12,14 +12,55 @@ const FranchiseHeroSection = () => {
         budget: ''
     });
 
+    const [status, setStatus] = useState({ loading: false, error: null, success: false });
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Franchise Form Submitted:', formData);
-        alert('Thank you for your interest! We will contact you soon.');
+        setStatus({ loading: true, error: null, success: false });
+
+        try {
+            // Map form data to match backend schema expecting 'contactNumber'
+            const payload = {
+                ...formData,
+                contactNumber: formData.contact // Mapping 'contact' to 'contactNumber'
+            };
+
+            const response = await fetch('http://localhost:5001/api/franchise', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Something went wrong');
+            }
+
+            setStatus({ loading: false, error: null, success: true });
+
+            // Clear form
+            setFormData({
+                name: '',
+                contact: '',
+                email: '',
+                area: '',
+                address: '',
+                message: '',
+                budget: ''
+            });
+
+            alert('Thank you for your interest! We will contact you soon.');
+
+        } catch (error) {
+            setStatus({ loading: false, error: error.message, success: false });
+            alert(`Error: ${error.message}`);
+        }
     };
 
     return (

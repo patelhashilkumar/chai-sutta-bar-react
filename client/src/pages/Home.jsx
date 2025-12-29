@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import StatsCounter from '../components/StatsCounter';
 import StorySection from '../components/StorySection';
 import FranchiseSection from '../components/FranchiseSection';
 import ImageCarousel from '../components/ImageCarousel';
@@ -15,6 +16,7 @@ const Home = () => {
     return (
         <div className="font-sans text-gray-900 pt-24 md:pt-32">
             <Navbar />
+            <StatsCounter />
             <StorySection />
             <ImageCarousel />
             <VideoSection />

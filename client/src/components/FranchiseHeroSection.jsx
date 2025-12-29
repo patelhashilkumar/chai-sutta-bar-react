@@ -29,7 +29,7 @@ const FranchiseHeroSection = () => {
                 contactNumber: formData.contact // Mapping 'contact' to 'contactNumber'
             };
 
-            const response = await fetch('http://localhost:5001/api/franchise', {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/franchise`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

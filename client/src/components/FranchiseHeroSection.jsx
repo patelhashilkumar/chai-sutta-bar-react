@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import franchisePromo from '../assets/franchise_promo.jpg';
 
+import { API_BASE_URL } from '../utils/api';
+
 const FranchiseHeroSection = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -29,7 +31,7 @@ const FranchiseHeroSection = () => {
                 contactNumber: formData.contact // Mapping 'contact' to 'contactNumber'
             };
 
-            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/franchise`, {
+            const response = await fetch(`${API_BASE_URL}/api/franchise`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

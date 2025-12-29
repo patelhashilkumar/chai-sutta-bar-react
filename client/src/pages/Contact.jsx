@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 
 import { Link } from 'react-router-dom';
 
+import { API_BASE_URL } from '../utils/api';
+
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -21,7 +23,7 @@ const Contact = () => {
         setStatus({ loading: true, error: null, success: false });
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/contact`, {
+            const response = await fetch(`${API_BASE_URL}/api/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
@@ -38,18 +40,18 @@ const Contact = () => {
         }
     };
     return (
-        <div className="flex flex-col min-h-screen font-['Montserrat']">
+        <div className="flex flex-col min-h-screen font-['Montserrat']" >
             <Navbar />
 
             {/* Main Content */}
-            <div className="flex-grow pt-24 md:pt-[104px]">
+            <div className="flex-grow pt-24 md:pt-[104px]" >
 
                 {/* Header Section */}
-                <div className="bg-[#4a2c2a] py-16 md:py-20 text-center relative overflow-hidden">
+                < div className="bg-[#4a2c2a] py-16 md:py-20 text-center relative overflow-hidden" >
                     {/* Background decorations could go here if needed */}
-                    <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-wide">Let's Talk</h1>
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#fdd835] tracking-wider">We're Here</h2>
-                </div>
+                    < h1 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-wide" > Let's Talk</h1>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#fdd835] tracking-wider" > We're Here</h2>
+                </div >
 
                 <div className="container mx-auto px-4 md:px-12 py-12">
 
@@ -182,10 +184,10 @@ const Contact = () => {
                     </div>
 
                 </div>
-            </div>
+            </div >
 
 
-        </div>
+        </div >
     );
 };
 

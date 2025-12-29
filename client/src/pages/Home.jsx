@@ -9,8 +9,8 @@ import LoveSupportSection from '../components/LoveSupportSection';
 import UntoldStorySection from '../components/UntoldStorySection';
 
 import OurStoriesSection from '../components/OurStoriesSection';
-import FranchiseConsultationSection from '../components/FranchiseConsultationSection';
-import Footer from '../components/Footer';
+
+
 
 const Home = () => {
     return (
@@ -24,8 +24,8 @@ const Home = () => {
             <UntoldStorySection />
             <FranchiseSection />
             <OurStoriesSection />
-            <FranchiseConsultationSection />
-            <Footer />
+
+
         </div>
     );
 };

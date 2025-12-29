@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 
 // Importing gallery images
 import img1 from '../assets/gallery/0W1A7728-scaled.jpg';
@@ -17,9 +17,7 @@ import img11 from '../assets/gallery/csb-coffee-kolkotar-ondormahol.jpg';
 import img12 from '../assets/gallery/pizza-poster.png';
 
 const Gallery = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     const [activeFilter, setActiveFilter] = useState('ALL');
     const [visibleCount, setVisibleCount] = useState(6);
@@ -119,7 +117,7 @@ const Gallery = () => {
                     )}
                 </div>
             </div>
-            <Footer />
+
         </div>
     );
 };

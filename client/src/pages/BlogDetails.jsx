@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 import { blogPosts } from '../data/blogPosts';
 
 const BlogDetails = () => {
     const { id } = useParams();
     const post = blogPosts.find(p => p.id === parseInt(id));
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [id]);
+
 
     if (!post) {
         return (
@@ -22,7 +20,7 @@ const BlogDetails = () => {
                         <Link to="/blog" className="text-csb-brown hover:underline">Back to Blog</Link>
                     </div>
                 </div>
-                <Footer />
+
             </div>
         );
     }
@@ -51,7 +49,7 @@ const BlogDetails = () => {
                 </div>
             </div>
 
-            <Footer />
+
         </div>
     );
 };

@@ -5,8 +5,7 @@ import WhyWeRockSection from '../components/WhyWeRockSection';
 import VideoSection from '../components/VideoSection';
 import FranchiseModelSection from '../components/FranchiseModelSection';
 import FranchiseStoriesSection from '../components/FranchiseStoriesSection';
-import FranchiseConsultationSection from '../components/FranchiseConsultationSection';
-import Footer from '../components/Footer';
+
 
 const Franchise = () => {
     return (
@@ -17,8 +16,7 @@ const Franchise = () => {
             <VideoSection />
             <FranchiseModelSection />
             <FranchiseStoriesSection />
-            <FranchiseConsultationSection />
-            <Footer />
+
         </div>
     );
 };

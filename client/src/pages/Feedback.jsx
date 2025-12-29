@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 
 const Feedback = () => {
     const [formData, setFormData] = useState({
@@ -127,7 +127,7 @@ const Feedback = () => {
                 </div>
             </div>
 
-            <Footer />
+
         </div>
     );
 };

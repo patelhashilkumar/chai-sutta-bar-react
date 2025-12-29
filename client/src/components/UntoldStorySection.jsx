@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import founderImage from '../assets/founders.png';
 
 const UntoldStorySection = () => {
@@ -22,9 +23,11 @@ const UntoldStorySection = () => {
                         <p className="text-xl md:text-2xl font-bold mb-10">
                             - Anubhav Dubey
                         </p>
-                        <button className="bg-[#fdd835] hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition duration-300">
-                            Know More!
-                        </button>
+                        <Link to="/about-us">
+                            <button className="bg-[#fdd835] hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition duration-300">
+                                Know More!
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Right Image */}

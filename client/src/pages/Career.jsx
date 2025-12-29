@@ -1,15 +1,12 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import FranchiseConsultationSection from '../components/FranchiseConsultationSection';
+
 import heroImage from '../assets/founders_office.png'; // Using as placeholder
 import { jobs } from '../data/jobs';
 
 const Career = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     return (
         <div>
@@ -56,8 +53,7 @@ const Career = () => {
                 </div>
             </div>
 
-            <FranchiseConsultationSection />
-            <Footer />
+
         </div>
     );
 };

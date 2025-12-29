@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 import { FaArrowRight } from 'react-icons/fa';
 import { blogPosts } from '../data/blogPosts';
 
 const Blog = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     return (
         <div className="bg-white">
@@ -51,7 +49,7 @@ const Blog = () => {
                 </div>
             </div>
 
-            <Footer />
+
         </div>
     );
 };

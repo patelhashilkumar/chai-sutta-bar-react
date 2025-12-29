@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import FranchiseConsultationSection from '../components/FranchiseConsultationSection';
+
 import heroImage from '../assets/founders_office.png'; // Placeholder image
 import { jobs } from '../data/jobs';
 
@@ -10,9 +9,7 @@ const JobDetails = () => {
     const { id } = useParams();
     const job = jobs.find(j => j.id === parseInt(id));
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [id]);
+
 
     if (!job) {
         return (
@@ -22,7 +19,7 @@ const JobDetails = () => {
                     <h2 className="text-2xl">Job not found</h2>
                     <Link to="/career" className="ml-4 text-csb-brown underline">Back to Careers</Link>
                 </div>
-                <Footer />
+
             </div>
         );
     }
@@ -83,8 +80,7 @@ const JobDetails = () => {
                 </div>
             </div>
 
-            <FranchiseConsultationSection />
-            <Footer />
+
         </div>
     );
 };

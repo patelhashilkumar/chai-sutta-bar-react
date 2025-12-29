@@ -1,6 +1,6 @@
 ﻿import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+
 
 const FAQs = () => {
     const [activeIndex, setActiveIndex] = useState(0); // First item expanded by default as per screenshot
@@ -75,7 +75,7 @@ const FAQs = () => {
                 </div>
             </div>
 
-            <Footer />
+
         </div>
     );
 };

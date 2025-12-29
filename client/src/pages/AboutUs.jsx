@@ -6,7 +6,7 @@ import TimelineSection from '../components/TimelineSection';
 import OurLeadersSection from '../components/OurLeadersSection';
 import OurUSPSection from '../components/OurUSPSection';
 import MediaMentionsSection from '../components/MediaMentionsSection';
-import Footer from '../components/Footer';
+
 import foundersBw from '../assets/founders_bw.png';
 
 const AboutUs = () => {
@@ -19,7 +19,7 @@ const AboutUs = () => {
             <OurLeadersSection />
             <OurUSPSection />
             <MediaMentionsSection />
-            <Footer />
+
         </div>
     );
 };

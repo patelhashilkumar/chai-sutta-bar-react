@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import franchiseImg from '../assets/Business-Opportunities-e1737096995311.jpg';
 
 const FranchiseSection = () => {
@@ -32,9 +33,11 @@ const FranchiseSection = () => {
                             Take the first step and become a part of the family that is ever-growing. Partner with the most trusted
                             brand in the market.
                         </p>
-                        <button className="bg-[#1a1a1a] hover:bg-black text-white font-bold py-3 px-8 rounded-full transition duration-300 uppercase tracking-wide text-base">
-                            Know More!
-                        </button>
+                        <Link to="/franchise">
+                            <button className="bg-[#1a1a1a] hover:bg-black text-white font-bold py-3 px-8 rounded-full transition duration-300 uppercase tracking-wide text-base">
+                                Know More!
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Right Image */}

@@ -1,14 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import MenuHighlightSection from '../components/MenuHighlightSection';
-import FranchiseConsultationSection from '../components/FranchiseConsultationSection';
+
 
 const Menu = () => {
-    // Scroll to top on mount
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     return (
         <div>
@@ -23,11 +19,8 @@ const Menu = () => {
 
                 {/* Reusing the Highlight Section as the main banner for now */}
                 <MenuHighlightSection />
-                <FranchiseConsultationSection />
 
-                {/* Additional menu content can be added here in the future */}
             </div>
-            <Footer />
         </div>
     );
 };

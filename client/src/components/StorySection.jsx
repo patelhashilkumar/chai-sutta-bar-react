@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import storyImg from '../assets/Website-Creative.png';
 
 const StorySection = () => {
@@ -26,9 +27,11 @@ const StorySection = () => {
                         Always Welcome To Join Us & Fall In Love With Tea Again.
                     </p>
 
-                    <button className="bg-black text-white px-14 py-6 rounded-full font-bold hover:bg-gray-900 transition duration-300 text-base md:text-lg tracking-widest shadow-xl">
-                        READ OUR STORY
-                    </button>
+                    <Link to="/about-us">
+                        <button className="bg-black text-white px-14 py-6 rounded-full font-bold hover:bg-gray-900 transition duration-300 text-base md:text-lg tracking-widest shadow-xl">
+                            READ OUR STORY
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Right Image - 2/5 width */}

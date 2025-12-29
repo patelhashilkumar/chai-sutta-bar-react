@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import FloatingContactWidget from './components/FloatingContactWidget';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -30,6 +31,7 @@ const PageLoader = () => (
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <div className="App">
                 <FloatingContactWidget />
                 <Suspense fallback={<PageLoader />}>
@@ -50,6 +52,7 @@ function App() {
                         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                     </Routes>
                 </Suspense>
+                <Footer />
             </div>
         </Router>
     );

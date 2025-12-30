@@ -1,10 +1,12 @@
 ﻿import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 
 import { API_BASE_URL } from '../utils/api';
 
 const Feedback = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         fullName: '',
         contactNumber: '',
@@ -34,6 +36,7 @@ const Feedback = () => {
 
             setStatus({ loading: false, error: null, success: true });
             setFormData({ fullName: '', contactNumber: '', email: '', message: '' });
+            navigate('/thank-you');
         } catch (error) {
             setStatus({ loading: false, error: error.message, success: false });
         }

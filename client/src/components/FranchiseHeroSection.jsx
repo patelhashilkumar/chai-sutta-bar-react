@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import franchisePromo from '../assets/franchise_promo.jpg';
 
 import { API_BASE_URL } from '../utils/api';
 
 const FranchiseHeroSection = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
         contact: '',
@@ -57,7 +59,8 @@ const FranchiseHeroSection = () => {
                 budget: ''
             });
 
-            alert('Thank you for your interest! We will contact you soon.');
+            navigate('/thank-you');
+            // alert('Thank you for your interest! We will contact you soon.');
 
         } catch (error) {
             setStatus({ loading: false, error: error.message, success: false });

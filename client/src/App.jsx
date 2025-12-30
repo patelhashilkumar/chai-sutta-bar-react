@@ -20,6 +20,7 @@ const Feedback = lazy(() => import('./pages/Feedback'));
 const FAQs = lazy(() => import('./pages/FAQs'));
 const Locations = lazy(() => import('./pages/Locations'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const ThankYou = lazy(() => import('./pages/ThankYou'));
 
 // Loading Fallback Component
 const PageLoader = () => (
@@ -50,6 +51,7 @@ function App() {
                         <Route path="/faqs" element={<FAQs />} />
                         <Route path="/locations" element={<Locations />} />
                         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                        <Route path="/thank-you" element={<ThankYou />} />
                     </Routes>
                 </Suspense>
                 <Footer />

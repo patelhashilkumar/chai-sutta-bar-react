@@ -17,6 +17,19 @@ if (!MONGO_URI) {
     console.warn('WARNING: MONGO_URI is not defined in .env file. MongoDB connection will fail.');
 }
 
+// Connection Events
+mongoose.connection.on('connected', () => {
+    console.log('Mongoose connected to DB Cluster');
+});
+
+mongoose.connection.on('error', (err) => {
+    console.error('Mongoose connection error:', err.message);
+});
+
+mongoose.connection.on('disconnected', () => {
+    console.log('Mongoose disconnected');
+});
+
 mongoose.connect(MONGO_URI)
     .then(() => console.log('MongoDB connected successfully'))
     .catch((err) => console.error('MongoDB connection error:', err));
